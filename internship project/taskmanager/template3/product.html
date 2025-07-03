@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Product Description</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-color: #343a40;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="display-4">SchedulePro - Task Manager</h1>
+        <p class="lead">Plan smarter. Work faster. Stay organized.</p>
+        <a href="{% url 'create-task' %}" class="btn btn-primary btn-lg mt-3">Get Started</a>
+    </div>
+</section>
+
+<!-- Product Overview -->
+<section class="container py-5">
+    <div class="row text-center mb-5">
+        <div class="col">
+            <h2>What is SchedulePro?</h2>
+            <p class="text-muted">SchedulePro is a powerful, easy-to-use task management system designed to help individuals and teams track their work, stay organized, and boost productivity. Whether you're managing personal tasks or team projects, SchedulePro makes it seamless.</p>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="feature-icon text-primary">📝</div>
+                    <h5 class="card-title">Create & Manage Tasks</h5>
+                    <p class="card-text">Easily add, update, or delete tasks. Prioritize your work with due dates and statuses.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="feature-icon text-success">📊</div>
+                    <h5 class="card-title">Track Progress</h5>
+                    <p class="card-text">Visualize progress with charts and real-time task completion tracking.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="feature-icon text-warning">🔔</div>
+                    <h5 class="card-title">Get Reminders</h5>
+                    <p class="card-text">Never miss a deadline. SchedulePro keeps you notified about upcoming tasks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="text-center py-5 bg-light">
+    <h3>Ready to get things done?</h3>
+    <p>Start managing your tasks with ease using SchedulePro.</p>
+    <a href="{% url 'create-task' %}" class="btn btn-primary btn-lg">Start Now</a>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-white">
+    &copy; 2025 SchedulePro. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

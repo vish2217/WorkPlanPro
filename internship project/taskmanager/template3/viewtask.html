@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .task {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .task:last-child {
+      border-bottom: none;
+    }
+
+    .task-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .task-desc {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .task-date {
+      font-size: 14px;
+      color: #888;
+    }
+
+    .no-task {
+      text-align: center;
+      color: #999;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Your Tasks</h2>
+
+    {% if tasks %}
+      {% for task in tasks %}
+        <div class="task">
+          <div class="task-title">{{ task.title }}</div>
+          <div class="task-desc">{{ task.description }}</div>
+          <div class="task-date">Due: {{ task.due_date }}</div>
+        <a href="{% url 'viewtask' %}">View task</a> 
+        <a href="{% url 'updatetask' task.id %}">Update Task</a>
+        <a href="{% url 'deletetask' task.id %}">Delete Task</a>
+
+
+
+
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="no-task">No tasks available.</p>
+    {% endif %}
+  </div>
+</body>
+</html>

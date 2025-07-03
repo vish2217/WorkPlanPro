@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How to Use Task Manager</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    ol, ul {
+      margin-left: 20px;
+    }
+
+    .btn {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>How to Use SchedulePro?</h1>
+
+    <h2>1. Login / Register</h2>
+    <p>
+      Start by logging in with your credentials or registering a new account. This ensures your tasks are secure and only visible to you.
+    </p>
+
+    <h2>2. Dashboard Overview</h2>
+    <p>
+      After login, you'll be taken to the dashboard where you can view an overview of your tasks, including upcoming and completed ones.
+    </p>
+
+    <h2>3. Create a New Task</h2>
+    <ol>
+      <li>Click on the "Create Task" button.</li>
+      <li>Fill in task details like title, description, deadline, and priority.</li>
+      <li>Click "Save" to add the task to your list.</li>
+    </ol>
+
+    <h2>4. View All Tasks</h2>
+    <p>
+      Go to the "My Tasks" section to see a list of all your tasks. You can filter or sort them if needed.
+    </p>
+
+    <h2>5. Update a Task</h2>
+    <p>
+      Click the "Edit" or "Update" button next to a task to change its information. Submit the form to save changes.
+    </p>
+
+    <h2>6. Delete a Task</h2>
+    <p>
+      Click the "Delete" button to remove a task permanently. A confirmation will be shown before deletion.
+    </p>
+
+    <h2>7. Logout</h2>
+    <p>
+      When finished, click the "Logout" link to exit your session securely.
+    </p>
+
+    <a href="{% url 'dashboard' %}" class="btn">Go to Dashboard</a>
+  </div>
+
+</body>
+</html>

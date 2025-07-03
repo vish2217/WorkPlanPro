@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #343a40;
+            color: white;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .card {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SchedulePro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{% url 'product' %}">Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'solutions' %}">Solutions</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'resources' %}">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'pricing' %}">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'enterprise' %}">Enterprise</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'customercare' %}">Customercare</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'faq' %}">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'guide' %}">guide</a></li>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar position-fixed">
+        <h4 class="text-center">SchedulePro</h4>
+        <a href="#">Dashboard</a>
+        <a href="#">Tasks</a>
+        <a href="{% url 'create-task' %}">Create Task</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'viewtask' %}">My tasks</a> 
+    </div>
+
+    <!-- Main Content -->
+    <div class="content w-100">
+        <!-- Top Navbar (Secondary) -->
+        <nav class="navbar navbar-light bg-light mb-4">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Dashboard</span>
+                <span class="text-muted">Welcome, User</span>
+            </div>
+        </nav>
+
+        <!-- Cards -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card text-white bg-primary">
+                    <div class="card-body">
+                        <h5>
+                            <a href="{% url 'viewtask' %}" style="color: black; text-decoration: none;">My tasks</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-success">
+                    <div class="card-body">
+                        <h5 class="card-title">Completed</h5>
+                        <p class="card-text fs-4">7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-warning">
+                    <div class="card-body">
+                        <h5 class="card-title">Pending</h5>
+                        <p class="card-text fs-4">5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task Table -->
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                Task List
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>#</th>
+                            <th>Task</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Design Landing Page</td>
+                            <td><span class="badge bg-warning">Pending</span></td>
+                            <td>2025-07-10</td>
+                            <td>
+                                <button class="btn btn-sm btn-success">Mark Done</button>
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Write Django Views</td>
+                            <td><span class="badge bg-success">Completed</span></td>
+                            <td>2025-06-28</td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" disabled>Done</button>
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more tasks here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

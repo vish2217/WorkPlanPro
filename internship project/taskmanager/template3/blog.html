@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager Blog – Updates & Productivity Tips</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    article {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    article h2 {
+      margin-top: 0;
+      color: #34495e;
+    }
+
+    .date {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    article p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Task Manager Blog</h1>
+    <p>Your source for updates, new features & productivity hacks</p>
+  </header>
+
+  <div class="container">
+    
+    <article>
+      <div class="date">July 2, 2025</div>
+      <h2>📌 New Feature: Task Prioritization with Color Tags</h2>
+      <p>
+        You can now assign color-coded priority tags to your tasks (High, Medium, Low).
+        This helps you visually organize and stay focused on what matters most each day.
+        Access it from the task creation or edit page.
+      </p>
+    </article>
+
+    <article>
+      <div class="date">June 27, 2025</div>
+      <h2>🚀 Version 2.0 Release: Dashboard & UI Improvements</h2>
+      <p>
+        We've completely redesigned the dashboard with a new summary view,
+        easier navigation, and mobile responsiveness. Plus, dark mode is now available!
+        Head to <a href="{% url 'dashboard' %}">your dashboard</a> to check it out.
+      </p>
+    </article>
+
+    <article>
+      <div class="date">June 15, 2025</div>
+      <h2>💡 Productivity Tip: The 2-Minute Rule</h2>
+      <p>
+        If a task takes less than 2 minutes, do it immediately. This rule is a game-changer
+        for clearing your task list quickly. Try combining it with our Quick Add feature
+        for lightning-fast entries.
+      </p>
+    </article>
+
+    <article>
+      <div class="date">June 1, 2025</div>
+      <h2>🔔 Reminders and Email Notifications</h2>
+      <p>
+        Task Manager now supports scheduled reminders and daily task summary emails.
+        Never miss a deadline again! You can enable notifications in your profile settings.
+      </p>
+    </article>
+
+    <article>
+      <div class="date">May 20, 2025</div>
+      <h2>📅 Coming Soon: Calendar View Integration</h2>
+      <p>
+        We’re working on an interactive calendar view where you can drag and drop tasks
+        to schedule them quickly. Stay tuned — this update is expected later this month!
+      </p>
+    </article>
+
+  </div>
+
+  <footer>
+    &copy; 2025 SchedulePro. All rights reserved.
+  </footer>
+
+</body>
+</html>
